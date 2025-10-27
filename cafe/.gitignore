@@ -2,13 +2,7 @@
 
 # dependencies
 /node_modules
-public/landing_video.mp4
-public/gallery/
-public/groupdinning/
-public/highlights/
-public/our_specials/
-public/ourmenu/
-public/we_offer/
+
 /.pnp
 .pnp.js
 
