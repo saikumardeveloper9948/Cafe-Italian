@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+public/landing_video.mp4
 
 /.pnp
 .pnp.js
