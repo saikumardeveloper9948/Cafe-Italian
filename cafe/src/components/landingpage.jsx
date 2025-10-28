@@ -1,5 +1,29 @@
 import React, { useState, useRef, useEffect } from 'react';
 
+// Import images
+import special1 from '../assets/our_specials/008d591d9d94ea3b34b7e0b2a3f82f9c74016586.png';
+import special2 from '../assets/our_specials/6dfefa80dbb588b32916508fc1938d0121bdeeea.png';
+import special3 from '../assets/our_specials/cd921bc8482c7ea770980fc0f9fd50b80c7bc41d.png';
+import adanaKebab from '../assets/highlights/adana_kebab.png';
+import baklava from '../assets/highlights/baklava.png';
+import kabab from '../assets/highlights/kabab.png';
+import maze from '../assets/highlights/maze.png';
+import italianDish from '../assets/ourmenu/italian dish.jpg';
+import pastry from '../assets/ourmenu/pastry.jpg';
+import coffee from '../assets/ourmenu/coffee.png';
+import food from '../assets/we_offer/food.png';
+import drinks from '../assets/we_offer/drinks.png';
+import atmosphere from '../assets/we_offer/atmosphere.png';
+import familyDinning from '../assets/groupdinning/familydinning.png';
+import gallery1 from '../assets/we_offer/gallery/53a4192459bf8b2e0d21257c898aa2313c24eed1.png';
+import gallery2 from '../assets/we_offer/gallery/5c339392cfd6ccf86937bc13e9948f1d245ace67.png';
+import gallery3 from '../assets/we_offer/gallery/087fa7012d21a057970e39bf0f6f25b6622891cc.png';
+import gallery4 from '../assets/we_offer/gallery/05cb63d2556880dffcafca8893f193eedcdd5ae4.png';
+import gallery5 from '../assets/we_offer/gallery/98d58aaac758d409935b6cb24285c82f279bea35 (1).png';
+import gallery6 from '../assets/we_offer/gallery/90b2b9fb394845439063a262d2bb0cb1426038a0.png';
+import gallery7 from '../assets/we_offer/gallery/a1bd0c17d235b2912a4c9ba45122e4432b92e938.png';
+import gallery8 from '../assets/we_offer/gallery/8c6c887823e2da74776c157f54b0a8d60114d4ac.png';
+
 const LandingPage = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentSpecialIndex, setCurrentSpecialIndex] = useState(0);
@@ -21,13 +45,13 @@ const LandingPage = () => {
 
   // Specials items array
   const specialsItems = [
-    { id: 1, name: "Classic Ribeye Steak", price: 30, image: "/our_specials/008d591d9d94ea3b34b7e0b2a3f82f9c74016586.png" },
-    { id: 2, name: "Italian Pasta", price: 25, image: "/our_specials/6dfefa80dbb588b32916508fc1938d0121bdeeea.png" },
-    { id: 3, name: "Pastry Delight", price: 28, image: "/our_specials/cd921bc8482c7ea770980fc0f9fd50b80c7bc41d.png" },
-    { id: 4, name: "Adana Kebab", price: 26, image: "/highlights/adana_kebab.png" },
-    { id: 5, name: "Baklava", price: 22, image: "/highlights/baklava.png" },
-    { id: 6, name: "Kebab Platter", price: 32, image: "/highlights/kabab.png" },
-    { id: 7, name: "Meze Platter", price: 27, image: "/highlights/maze.png" },
+    { id: 1, name: "Classic Ribeye Steak", price: 30, image: special1 },
+    { id: 2, name: "Italian Pasta", price: 25, image: special2 },
+    { id: 3, name: "Pastry Delight", price: 28, image: special3 },
+    { id: 4, name: "Adana Kebab", price: 26, image: adanaKebab },
+    { id: 5, name: "Baklava", price: 22, image: baklava },
+    { id: 6, name: "Kebab Platter", price: 32, image: kabab },
+    { id: 7, name: "Meze Platter", price: 27, image: maze },
   ];
 
   const handlePrevSpecial = () => {
@@ -324,7 +348,7 @@ const LandingPage = () => {
             <div className="relative group cursor-pointer overflow-hidden rounded-lg">
               <div className="relative h-[400px] md:h-[500px] overflow-hidden">
                 <img 
-                  src="/ourmenu/italian dish.jpg" 
+                  src={italianDish} 
                   alt="Italian dishes" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -342,7 +366,7 @@ const LandingPage = () => {
             <div className="relative group cursor-pointer overflow-hidden rounded-lg">
               <div className="relative h-[400px] md:h-[500px] overflow-hidden">
                 <img 
-                  src="/ourmenu/pastry.jpg" 
+                  src={pastry} 
                   alt="Pastry" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -360,7 +384,7 @@ const LandingPage = () => {
             <div className="relative group cursor-pointer overflow-hidden rounded-lg">
               <div className="relative h-[400px] md:h-[500px] overflow-hidden">
                 <img 
-                  src="/ourmenu/coffee.png" 
+                  src={coffee} 
                   alt="Coffee" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -410,7 +434,7 @@ const LandingPage = () => {
             <div className="group relative overflow-hidden">
               <div className="relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden border-4 border-white shadow-2xl shadow-white/20 group-hover:shadow-white/40 transition-all duration-500">
                 <img 
-                  src="/we_offer/food.png" 
+                  src={food} 
                   alt="Food" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -436,7 +460,7 @@ const LandingPage = () => {
             <div className="group relative overflow-hidden">
               <div className="relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden border-4 border-white shadow-2xl shadow-white/20 group-hover:shadow-white/40 transition-all duration-500">
                 <img 
-                  src="/we_offer/drinks.png" 
+                  src={drinks} 
                   alt="Drinks" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -462,7 +486,7 @@ const LandingPage = () => {
             <div className="group relative overflow-hidden">
               <div className="relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden border-4 border-white shadow-2xl shadow-white/20 group-hover:shadow-white/40 transition-all duration-500">
                 <img 
-                  src="/we_offer/atmosphere.png" 
+                  src={atmosphere} 
                   alt="Atmosphere" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -671,7 +695,7 @@ const LandingPage = () => {
             <div className="flex flex-col items-center text-center group">
               <div className="relative w-full aspect-square mb-4 overflow-hidden rounded-lg">
                 <img 
-                  src="/highlights/adana_kebab.png" 
+                  src={adanaKebab} 
                   alt="Adana Kebab" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -684,7 +708,7 @@ const LandingPage = () => {
             <div className="flex flex-col items-center text-center group">
               <div className="relative w-full aspect-square mb-4 overflow-hidden rounded-lg">
                 <img 
-                  src="/highlights/maze.png" 
+                  src={maze} 
                   alt="Meze Platter" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -697,7 +721,7 @@ const LandingPage = () => {
             <div className="flex flex-col items-center text-center group">
               <div className="relative w-full aspect-square mb-4 overflow-hidden rounded-lg">
                 <img 
-                  src="/highlights/baklava.png" 
+                  src={baklava} 
                   alt="Baklava" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -710,7 +734,7 @@ const LandingPage = () => {
             <div className="flex flex-col items-center text-center group">
               <div className="relative w-full aspect-square mb-4 overflow-hidden rounded-lg">
                 <img 
-                  src="/highlights/kabab.png" 
+                  src={kabab} 
                   alt="Kebab Platter" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -727,7 +751,7 @@ const LandingPage = () => {
         {/* Background Image with Dark Overlay */}
         <div className="absolute inset-0">
           <img 
-            src="/groupdinning/familydinning.png" 
+            src={familyDinning} 
             alt="Restaurant Interior" 
             className="w-full h-full object-cover"
           />
@@ -901,7 +925,7 @@ const LandingPage = () => {
             {/* Image 1 */}
             <div className="relative aspect-square overflow-hidden group border-2 border-blue-500 rounded">
               <img 
-                src="/gallery/53a4192459bf8b2e0d21257c898aa2313c24eed1.png" 
+                src={gallery1} 
                 alt="Gallery" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -911,7 +935,7 @@ const LandingPage = () => {
             {/* Image 2 */}
             <div className="relative aspect-square overflow-hidden group border-2 border-blue-500 rounded">
               <img 
-                src="/gallery/5c339392cfd6ccf86937bc13e9948f1d245ace67.png" 
+                src={gallery2} 
                 alt="Gallery" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -921,7 +945,7 @@ const LandingPage = () => {
             {/* Image 3 */}
             <div className="relative aspect-square overflow-hidden group border-2 border-blue-500 rounded">
               <img 
-                src="/gallery/087fa7012d21a057970e39bf0f6f25b6622891cc.png" 
+                src={gallery3} 
                 alt="Gallery" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -931,7 +955,7 @@ const LandingPage = () => {
             {/* Image 4 */}
             <div className="relative aspect-square overflow-hidden group border-2 border-blue-500 rounded">
               <img 
-                src="/gallery/05cb63d2556880dffcafca8893f193eedcdd5ae4.png" 
+                src={gallery4} 
                 alt="Gallery" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -941,7 +965,7 @@ const LandingPage = () => {
             {/* Image 5 */}
             <div className="relative aspect-square overflow-hidden group border-2 border-blue-500 rounded">
               <img 
-                src="/gallery/98d58aaac758d409935b6cb24285c82f279bea35 (1).png" 
+                src={gallery5} 
                 alt="Gallery" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -951,7 +975,7 @@ const LandingPage = () => {
             {/* Image 6 */}
             <div className="relative aspect-square overflow-hidden group border-2 border-blue-500 rounded">
               <img 
-                src="/gallery/90b2b9fb394845439063a262d2bb0cb1426038a0.png" 
+                src={gallery6} 
                 alt="Gallery" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -961,7 +985,7 @@ const LandingPage = () => {
             {/* Image 7 */}
             <div className="relative aspect-square overflow-hidden group border-2 border-blue-500 rounded">
               <img 
-                src="/gallery/a1bd0c17d235b2912a4c9ba45122e4432b92e938.png" 
+                src={gallery7} 
                 alt="Gallery" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -971,7 +995,7 @@ const LandingPage = () => {
             {/* Image 8 */}
             <div className="relative aspect-square overflow-hidden group border-2 border-blue-500 rounded">
               <img 
-                src="/gallery/8c6c887823e2da74776c157f54b0a8d60114d4ac.png" 
+                src={gallery8} 
                 alt="Gallery" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
